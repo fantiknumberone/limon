@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">LIMON</string>
+    <string name="app_logo">Логотип приложения</string>
+
+
+    <string name="button_mp3b">MP3 Плеер</string>
+    <string name="button_mp3text">MP3 Плеер (заглушка)</string>
+
+
+    <string name="button_calc">Калькулятор</string>
     <string name="button_1">1</string>
     <string name="button_2">2</string>
     <string name="button_3">3</string>

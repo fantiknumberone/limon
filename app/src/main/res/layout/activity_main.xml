@@ -1,166 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#FFFFFF">
 
-    <TextView
-        android:id="@+id/display"
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/app_logo"
+    android:contentDescription="@string/app_logo" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/calc_button"
+        android:layout_width="144dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:background="#FFC107"
+        android:text="@string/button_calc"
+        android:textColor="@color/black"
+        android:textColorLink="#FFEB3B"
+        android:textSize="18sp" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/music_button"
+        android:layout_width="122dp"
+        android:layout_height="59dp"
+        android:layout_below="@id/calc_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="9dp"
+        android:background="#FFC107"
+        android:text="@string/button_mp3b"
+        android:textColor="@color/black"
+        android:textColorLink="@color/black"
+        android:textSize="18sp" />
+
+
+    <LinearLayout
+        android:id="@+id/future_buttons"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="36sp"
-        android:gravity="end"
-        android:padding="16dp"
-        android:background="#FFFFFF"/>
+        android:layout_below="@id/music_button"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical"
+        android:padding="16dp">
 
-    <GridLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/display"
-        android:columnCount="4">
-
-        <Button
-            android:layout_margin="3dp"
-            android:background="#3F51B5"
-            android:onClick="appendText"
-            android:text="@string/button_1"
-            app:iconPadding="10dp"
-            app:iconSize="10dp" />
-
-        <Button
-            android:layout_margin="3dp"
-            android:background="#3F51B5"
-            android:onClick="appendText"
-            android:text="@string/button_2"
-            app:iconPadding="10dp"
-            app:iconSize="10dp" />
-
-        <Button
-            android:layout_margin="3dp"
-            android:background="#3F51B5"
-            android:onClick="appendText"
-            android:text="@string/button_3"
-            app:iconPadding="10dp"
-            app:iconSize="10dp" />
-
-        <Button
-            android:layout_margin="3dp"
-            android:background="#3F51B5"
-            android:onClick="ops"
-            android:text="@string/button_plus"
-            app:iconPadding="10dp"
-            app:iconSize="10dp" />
-
-        <Button
-            android:layout_margin="3dp"
-            android:background="#3F51B5"
-            android:onClick="appendText"
-            android:text="@string/button_4"
-            app:iconPadding="10dp"
-            app:iconSize="10dp" />
-
-        <Button
-            android:layout_margin="3dp"
-            android:background="#3F51B5"
-            android:onClick="appendText"
-            android:text="@string/button_5"
-            app:iconPadding="10dp"
-            app:iconSize="10dp" />
-
-        <Button
-            android:layout_margin="3dp"
-            android:background="#3F51B5"
-            android:onClick="appendText"
-            android:text="@string/button_6"
-            app:iconPadding="10dp"
-            app:iconSize="10dp" />
-
-        <Button
-            android:layout_margin="3dp"
-            android:background="#3F51B5"
-            android:onClick="ops"
-            android:text="@string/button_minus"
-            app:iconPadding="10dp"
-            app:iconSize="10dp" />
-
-        <Button
-            android:layout_margin="3dp"
-            android:background="#3F51B5"
-            android:onClick="appendText"
-            android:text="@string/button_7"
-            app:iconPadding="10dp"
-            app:iconSize="10dp" />
-
-        <Button
-            android:layout_margin="3dp"
-            android:background="#3F51B5"
-            android:onClick="appendText"
-            android:text="@string/button_8"
-            app:iconPadding="10dp"
-            app:iconSize="10dp" />
-
-        <Button
-            android:layout_margin="3dp"
-            android:background="#3F51B5"
-            android:onClick="appendText"
-            android:text="@string/button_9"
-            app:iconPadding="10dp"
-            app:iconSize="10dp" />
-
-        <Button
-            android:layout_margin="3dp"
-            android:background="#3F51B5"
-            android:onClick="ops"
-            android:text="@string/button_multiply"
-            app:iconPadding="10dp"
-            app:iconSize="10dp" />
-
-        <Button
-            android:layout_margin="3dp"
-            android:background="#3F51B5"
-            android:onClick="appendText"
-            android:text="@string/button_0"
-            app:iconPadding="10dp"
-            app:iconSize="10dp" />
-
-        <Button
-            android:layout_margin="3dp"
-            android:background="#3F51B5"
-            android:onClick="floatInput"
-            android:text="@string/button_float"
-            app:iconPadding="10dp"
-            app:iconSize="10dp" />
-
-        <Button
-            android:layout_margin="3dp"
-            android:background="#3F51B5"
-            android:onClick="equal"
-            android:text="@string/button_equal"
-            app:iconPadding="10dp"
-            app:iconSize="10dp" />
-
-        <Button
-            android:layout_margin="3dp"
-            android:background="#3F51B5"
-            android:onClick="ops"
-            android:text="@string/button_divide"
-            app:iconPadding="10dp"
-            app:iconSize="10dp" />
-
-        <Button
-            android:layout_margin="3dp"
-            android:background="#3F51B5"
-            android:onClick="backAll"
-            android:text="@string/button_ac"
-            app:iconPadding="10dp"
-            app:iconSize="10dp" />
-
-        <Button
-            android:layout_margin="3dp"
-            android:background="#3F51B5"
-            android:onClick="back"
-            android:text="@string/button_back"
-            app:iconPadding="10dp"
-            app:iconSize="10dp" />
-    </GridLayout>
+    </LinearLayout>
 </RelativeLayout>

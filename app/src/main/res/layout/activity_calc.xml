@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/display"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="36sp"
+        android:gravity="end"
+        android:padding="16dp"
+        android:background="#FFFFFF"/>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/display"
+        android:background="@color/white"
+        android:columnCount="4">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_margin="3dp"
+            android:background="#FFEA00"
+            android:onClick="appendText"
+            android:text="@string/button_1"
+            app:iconPadding="10dp"
+            app:iconSize="10dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_margin="3dp"
+            android:background="#FFEA00"
+            android:onClick="appendText"
+            android:text="@string/button_2"
+            app:iconPadding="10dp"
+            app:iconSize="10dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_margin="3dp"
+            android:background="#FFEA00"
+            android:onClick="appendText"
+            android:text="@string/button_3"
+            app:iconPadding="10dp"
+            app:iconSize="10dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_margin="3dp"
+            android:background="#FFEA00"
+            android:onClick="ops"
+            android:text="@string/button_plus"
+            app:iconPadding="10dp"
+            app:iconSize="10dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_margin="3dp"
+            android:background="#FFEA00"
+            android:onClick="appendText"
+            android:text="@string/button_4"
+            app:iconPadding="10dp"
+            app:iconSize="10dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_margin="3dp"
+            android:background="#FFEA00"
+            android:onClick="appendText"
+            android:text="@string/button_5"
+            app:iconPadding="10dp"
+            app:iconSize="10dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_margin="3dp"
+            android:background="#FFEA00"
+            android:onClick="appendText"
+            android:text="@string/button_6"
+            app:iconPadding="10dp"
+            app:iconSize="10dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_margin="3dp"
+            android:background="#FFEA00"
+            android:onClick="ops"
+            android:text="@string/button_minus"
+            app:iconPadding="10dp"
+            app:iconSize="10dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_margin="3dp"
+            android:background="#FFEA00"
+            android:onClick="appendText"
+            android:text="@string/button_7"
+            app:iconPadding="10dp"
+            app:iconSize="10dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_margin="3dp"
+            android:background="#FFEA00"
+            android:onClick="appendText"
+            android:text="@string/button_8"
+            app:iconPadding="10dp"
+            app:iconSize="10dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_margin="3dp"
+            android:background="#FFEA00"
+            android:onClick="appendText"
+            android:text="@string/button_9"
+            app:iconPadding="10dp"
+            app:iconSize="10dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_margin="3dp"
+            android:background="#FFEA00"
+            android:onClick="ops"
+            android:text="@string/button_multiply"
+            app:iconPadding="10dp"
+            app:iconSize="10dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_margin="3dp"
+            android:background="#FFEA00"
+            android:onClick="appendText"
+            android:text="@string/button_0"
+            app:iconPadding="10dp"
+            app:iconSize="10dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_margin="3dp"
+            android:background="#FFEA00"
+            android:onClick="floatInput"
+            android:text="@string/button_float"
+            app:iconPadding="10dp"
+            app:iconSize="10dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_margin="3dp"
+            android:background="#FFEA00"
+            android:onClick="equal"
+            android:text="@string/button_equal"
+            app:iconPadding="10dp"
+            app:iconSize="10dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_margin="3dp"
+            android:background="#FFEA00"
+            android:onClick="ops"
+            android:text="@string/button_divide"
+            app:iconPadding="10dp"
+            app:iconSize="10dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_margin="3dp"
+            android:background="#FFEA00"
+            android:onClick="backAll"
+            android:text="@string/button_ac"
+            app:iconPadding="10dp"
+            app:iconSize="10dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_margin="3dp"
+            android:background="#FFEA00"
+            android:onClick="back"
+            android:text="@string/button_back"
+            app:iconPadding="10dp"
+            app:iconSize="10dp" />
+    </GridLayout>
+</RelativeLayout>
