@@ -10,7 +10,7 @@ class MusicActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_music)
 
-        val textView: TextView = findViewById(R.id.music_text)
+        val textView: TextView = findViewById(R.id.textViewmp3)
         textView.text = "MP3 Плеер (заглушка)"
     }
 }
