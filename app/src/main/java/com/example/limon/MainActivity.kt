@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
 
         val musicButton: Button = findViewById(R.id.music_button)
         musicButton.setOnClickListener {
-            val intent = Intent(this, MusicActivity::class.java)
+            val intent = Intent(this, Mp3PlayerActivity ::class.java)
             startActivity(intent)
         }
     }

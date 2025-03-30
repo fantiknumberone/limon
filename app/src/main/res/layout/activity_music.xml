@@ -1,77 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#F5F5F5">
+
+
+    <TextView
+        android:id="@+id/textViewmp3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/default_song_name"
+        android:fontFamily="sans-serif-black"
+        android:textSize="18sp"
+        android:textColor="#333333"
+        android:textAlignment="center"
+        android:layout_marginBottom="24dp"
+        android:ellipsize="end"
+        android:maxLines="1"/>
+
+
+    <SeekBar
+        android:id="@+id/remBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:layout_marginBottom="24dp"
+        android:progressTint="#000000"/>
+
 
     <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="182dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="195dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:weightSum="1">
+        android:gravity="center"
+        android:layout_marginBottom="32dp"
+        android:weightSum="3">
 
-        <Button
+
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/buttonPrev"
-            android:layout_width="wrap_content"
-            android:layout_height="80dp"
-            android:layout_margin="18dp"
-            android:text="@string/prevMp3" />
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:background="#FFEA00"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/prevMp3"
+            android:textAllCaps="false" />
+
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/buttonPause"
-            android:layout_width="100dp"
-            android:layout_height="117dp"
-            android:layout_margin="18dp"
-            android:text="@string/pauseMp3" />
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/playMp3"
+            android:background="#FFEA00"
+
+            android:textAllCaps="false"/>
+
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/buttonNext"
-            android:layout_width="wrap_content"
-            android:layout_height="80dp"
-            android:layout_margin="18dp"
-            android:text="@string/nextMp3" />
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:text="@string/nextMp3"
+            android:fontFamily="sans-serif-black"
+            android:layout_marginStart="8dp"
+            android:background="#FFEA00"
 
+            android:textAllCaps="false"/>
     </LinearLayout>
 
-    <SeekBar
-        android:id="@+id/volumeBar"
-        android:layout_width="395dp"
-        android:layout_height="47dp" />
 
     <LinearLayout
-        android:layout_width="395dp"
-        android:layout_height="246dp"
-        android:layout_above="@+id/linearLayout"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="100dp"
-        android:layout_marginBottom="150dp"
-        android:orientation="vertical">
-
-        <Switch
-            android:id="@+id/switchControl"
-            android:layout_width="match_parent"
-            android:layout_height="44dp"
-            android:text="@string/offPlayMp3"
-            android:visibility="visible"
-            tools:visibility="visible" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="24dp">
 
         <TextView
-            android:id="@+id/textViewmp3"
-            android:layout_width="293dp"
-            android:layout_height="42dp"
-            android:layout_margin="30dp"
-            android:text="TextView" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/volBarMP3"
+            android:textColor="#333333"
+            android:layout_marginEnd="8dp"/>
 
         <SeekBar
-            android:id="@+id/remBar"
-            android:layout_width="match_parent"
+            android:id="@+id/volumeBar"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp" />
-
+            android:fontFamily="sans-serif-black"
+            android:layout_weight="1"
+            android:progressTint="#000000"/>
     </LinearLayout>
 
-</RelativeLayout>
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switchControl"
+        android:layout_width="184dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="#FFEA00"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/offPlayMp3"
+        app:trackTint="#000000" />
+</LinearLayout>

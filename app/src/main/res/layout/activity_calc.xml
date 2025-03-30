@@ -9,6 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="36sp"
+        android:fontFamily="sans-serif-black"
         android:gravity="end"
         android:padding="16dp"
         android:background="#FFFFFF"/>
@@ -24,6 +25,7 @@
             android:layout_margin="3dp"
             android:background="#FFEA00"
             android:onClick="appendText"
+            android:fontFamily="sans-serif-black"
             android:text="@string/button_1"
             app:iconPadding="10dp"
             app:iconSize="10dp" />
@@ -31,6 +33,7 @@
         <androidx.appcompat.widget.AppCompatButton
             android:layout_margin="3dp"
             android:background="#FFEA00"
+            android:fontFamily="sans-serif-black"
             android:onClick="appendText"
             android:text="@string/button_2"
             app:iconPadding="10dp"
@@ -40,6 +43,7 @@
             android:layout_margin="3dp"
             android:background="#FFEA00"
             android:onClick="appendText"
+            android:fontFamily="sans-serif-black"
             android:text="@string/button_3"
             app:iconPadding="10dp"
             app:iconSize="10dp" />
@@ -48,6 +52,7 @@
             android:layout_margin="3dp"
             android:background="#FFEA00"
             android:onClick="ops"
+            android:fontFamily="sans-serif-black"
             android:text="@string/button_plus"
             app:iconPadding="10dp"
             app:iconSize="10dp" />
@@ -56,6 +61,7 @@
             android:layout_margin="3dp"
             android:background="#FFEA00"
             android:onClick="appendText"
+            android:fontFamily="sans-serif-black"
             android:text="@string/button_4"
             app:iconPadding="10dp"
             app:iconSize="10dp" />
@@ -65,6 +71,7 @@
             android:background="#FFEA00"
             android:onClick="appendText"
             android:text="@string/button_5"
+            android:fontFamily="sans-serif-black"
             app:iconPadding="10dp"
             app:iconSize="10dp" />
 
@@ -73,6 +80,7 @@
             android:background="#FFEA00"
             android:onClick="appendText"
             android:text="@string/button_6"
+            android:fontFamily="sans-serif-black"
             app:iconPadding="10dp"
             app:iconSize="10dp" />
 
@@ -81,6 +89,7 @@
             android:background="#FFEA00"
             android:onClick="ops"
             android:text="@string/button_minus"
+            android:fontFamily="sans-serif-black"
             app:iconPadding="10dp"
             app:iconSize="10dp" />
 
@@ -89,6 +98,7 @@
             android:background="#FFEA00"
             android:onClick="appendText"
             android:text="@string/button_7"
+            android:fontFamily="sans-serif-black"
             app:iconPadding="10dp"
             app:iconSize="10dp" />
 
@@ -97,6 +107,7 @@
             android:background="#FFEA00"
             android:onClick="appendText"
             android:text="@string/button_8"
+            android:fontFamily="sans-serif-black"
             app:iconPadding="10dp"
             app:iconSize="10dp" />
 
@@ -105,6 +116,7 @@
             android:background="#FFEA00"
             android:onClick="appendText"
             android:text="@string/button_9"
+            android:fontFamily="sans-serif-black"
             app:iconPadding="10dp"
             app:iconSize="10dp" />
 
@@ -113,6 +125,7 @@
             android:background="#FFEA00"
             android:onClick="ops"
             android:text="@string/button_multiply"
+            android:fontFamily="sans-serif-black"
             app:iconPadding="10dp"
             app:iconSize="10dp" />
 
@@ -121,6 +134,7 @@
             android:background="#FFEA00"
             android:onClick="appendText"
             android:text="@string/button_0"
+            android:fontFamily="sans-serif-black"
             app:iconPadding="10dp"
             app:iconSize="10dp" />
 
@@ -130,6 +144,7 @@
             android:onClick="floatInput"
             android:text="@string/button_float"
             app:iconPadding="10dp"
+            android:fontFamily="sans-serif-black"
             app:iconSize="10dp" />
 
         <androidx.appcompat.widget.AppCompatButton
@@ -137,6 +152,7 @@
             android:background="#FFEA00"
             android:onClick="equal"
             android:text="@string/button_equal"
+            android:fontFamily="sans-serif-black"
             app:iconPadding="10dp"
             app:iconSize="10dp" />
 
@@ -145,6 +161,7 @@
             android:background="#FFEA00"
             android:onClick="ops"
             android:text="@string/button_divide"
+            android:fontFamily="sans-serif-black"
             app:iconPadding="10dp"
             app:iconSize="10dp" />
 
@@ -153,6 +170,7 @@
             android:background="#FFEA00"
             android:onClick="backAll"
             android:text="@string/button_ac"
+            android:fontFamily="sans-serif-black"
             app:iconPadding="10dp"
             app:iconSize="10dp" />
 
@@ -161,6 +179,7 @@
             android:background="#FFEA00"
             android:onClick="back"
             android:text="@string/button_back"
+            android:fontFamily="sans-serif-black"
             app:iconPadding="10dp"
             app:iconSize="10dp" />
     </GridLayout>
