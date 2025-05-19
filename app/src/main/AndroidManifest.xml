@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.limon">
 
-    <!-- Permissions -->
+
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
@@ -14,13 +14,13 @@
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
 
-    <!-- Для работы с файлами -->
+
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
         android:maxSdkVersion="32" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         android:maxSdkVersion="28" />
 
-    <!-- Для сервисов -->
+
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
@@ -35,7 +35,7 @@
         android:theme="@style/Theme.LIMON"
         tools:targetApi="31">
 
-        <!-- Main Activity -->
+
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -46,26 +46,26 @@
             </intent-filter>
         </activity>
 
-        <!-- System Info Activity -->
+
         <activity
             android:name=".SystemInfoActivity"
             android:exported="false"
             android:label="@string/system_info_title" />
 
-        <!-- Calculator Activity -->
+
         <activity
             android:name=".CalcActivity"
             android:exported="false"
             android:label="@string/calc_title" />
 
-        <!-- MP3 Player Activity -->
+
         <activity
             android:name=".Mp3PlayerActivity"
             android:exported="false"
             android:label="@string/mp3_player_title"
            />
 
-        <!-- Font preloading -->
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

@@ -42,23 +42,23 @@ import java.util.concurrent.Executors
 @SuppressLint("MissingPermission", "BatteryLife")
 class SystemInfoActivity : AppCompatActivity() {
 
-    // Views
+
     private lateinit var tvTime: TextView
     private lateinit var tvSignal: TextView
     private lateinit var tvLocation: TextView
     private lateinit var tvStatus: TextView
     private lateinit var btnRefresh: Button
 
-    // Services
+
     private lateinit var telephonyManager: TelephonyManager
     private lateinit var fusedLocationClient: FusedLocationProviderClient
 
-    // Data
+
     private var signalStrengthValue = 0
     private var currentLocation: Location? = null
     private val executor = Executors.newSingleThreadExecutor()
 
-    // Permissions
+
     private val requiredPermissions = arrayOf(
         Manifest.permission.ACCESS_COARSE_LOCATION,
         Manifest.permission.ACCESS_FINE_LOCATION,
@@ -69,7 +69,7 @@ class SystemInfoActivity : AppCompatActivity() {
         }
     )
 
-    // Location configuration
+
     private val locationRequest = LocationRequest.Builder(
         Priority.PRIORITY_HIGH_ACCURACY,
         10000
@@ -83,7 +83,7 @@ class SystemInfoActivity : AppCompatActivity() {
         }
     }
 
-    // Signal strength listeners
+
     @Suppress("DEPRECATION")
     private val phoneStateListener = object : PhoneStateListener() {
         override fun onSignalStrengthsChanged(signalStrength: SignalStrength) {
