@@ -2,6 +2,9 @@
 <resources>
     <string name="app_name">LIMON</string>
     <string name="app_logo">Логотип приложения</string>
+    <string name="system_info_title">System Information</string>
+    <string name="calc_title">Calculator</string>
+    <string name="mp3_player_title">Music Player</string>
 
 
     <string name="button_calc">Калькулятор</string>
@@ -40,4 +43,21 @@
     <string name="default_song_name">No song selected</string>
     <string name="play">Play</string>
     <string name="song_info_format">%1$s - %2$s</string>
+
+
+    <string name="button_system_info">Локация</string>
+    <string name="time_icon">Time icon</string>
+    <string name="signal_icon">Signal icon</string>
+    <string name="location_icon">Location icon</string>
+    <string name="time_label">Time:</string>
+    <string name="signal_label">Signal:</string>
+    <string name="location_label">Location:</string>
+    <string name="refresh_button">Refresh Data</string>
+    <string name="current_time">Current Time: %s</string>
+    <string name="signal_strength">%s dBm</string>
+    <string name="location_coords">Lat: %s, Lon: %s</string>
+    <string name="location_not_available">Not available</string>
+    <string name="status_auto_saved">Last updated: %s</string>
+    <string name="status_error_saving">Error saving data</string>
+    <string name="error_saving_data">Failed to save data</string>
 </resources>

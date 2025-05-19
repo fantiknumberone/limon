@@ -22,7 +22,7 @@ class Mp3PlayerActivity : AppCompatActivity() {
     private val TAG = "Mp3Player"
     private val APP_FOLDER_NAME = "MP3Player"
 
-    // Views
+
     private lateinit var buttonPrev: Button
     private lateinit var buttonNext: Button
     private lateinit var buttonPause: Button
