@@ -11,6 +11,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
+
         val calcButton: Button = findViewById(R.id.calc_button)
         calcButton.setOnClickListener {
             val intent = Intent(this, CalcActivity::class.java)
