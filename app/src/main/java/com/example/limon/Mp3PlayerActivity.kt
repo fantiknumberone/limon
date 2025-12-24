@@ -4,7 +4,6 @@ import android.Manifest
 import android.content.pm.PackageManager
 import android.media.MediaPlayer
 import android.os.*
-import android.util.Log
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SwitchCompat
@@ -19,9 +18,7 @@ class Mp3PlayerActivity : AppCompatActivity() {
     private var currentSongIndex = 0
     private var isPlaying = false
     private lateinit var handler: Handler
-    private val TAG = "Mp3Player"
     private val APP_FOLDER_NAME = "MP3Player"
-
 
     private lateinit var buttonPrev: Button
     private lateinit var buttonNext: Button
@@ -39,16 +36,10 @@ class Mp3PlayerActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_music)
 
-        try {
-            initViews()
-            handler = Handler(Looper.getMainLooper())
-            initMediaPlayer()
-            checkPermissions()
-        } catch (e: Exception) {
-            Log.e(TAG, "Initialization failed", e)
-            showToast("Initialization failed")
-            finish()
-        }
+        initViews()
+        handler = Handler(Looper.getMainLooper())
+        initMediaPlayer()
+        checkPermissions()
     }
 
     private fun initViews() {
@@ -69,10 +60,10 @@ class Mp3PlayerActivity : AppCompatActivity() {
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
                 mediaPlayer?.setVolume(progress / 100f, progress / 100f)
             }
+
             override fun onStartTrackingTouch(seekBar: SeekBar?) {}
             override fun onStopTrackingTouch(seekBar: SeekBar?) {}
         })
-
 
         seekBar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(seekBar: SeekBar, progress: Int, fromUser: Boolean) {
@@ -80,15 +71,16 @@ class Mp3PlayerActivity : AppCompatActivity() {
                     mediaPlayer?.seekTo(progress)
                 }
             }
+
             override fun onStartTrackingTouch(seekBar: SeekBar) {}
             override fun onStopTrackingTouch(seekBar: SeekBar) {}
         })
 
         switchBackground.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
-                showToast("Background play enabled")
+                Toast.makeText(this, "Background play enabled", Toast.LENGTH_SHORT).show()
             } else {
-                showToast("Background play disabled")
+                Toast.makeText(this, "Background play disabled", Toast.LENGTH_SHORT).show()
             }
         }
     }
@@ -96,7 +88,6 @@ class Mp3PlayerActivity : AppCompatActivity() {
     private fun initMediaPlayer() {
         mediaPlayer = MediaPlayer().apply {
             setOnErrorListener { _, what, extra ->
-                Log.e(TAG, "MediaPlayer error: $what, $extra")
                 false
             }
             setOnCompletionListener {
@@ -104,8 +95,6 @@ class Mp3PlayerActivity : AppCompatActivity() {
             }
         }
     }
-
-
 
     private fun checkPermissions() {
         val permission = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
@@ -121,18 +110,15 @@ class Mp3PlayerActivity : AppCompatActivity() {
         }
     }
 
-
-
-
     private fun loadSongs() {
         try {
             val musicDir = File(Environment.getExternalStorageDirectory(), APP_FOLDER_NAME)
             if (!musicDir.exists()) {
                 if (!musicDir.mkdirs()) {
-                    showToast("Failed to create music directory")
+                    Toast.makeText(this, "Failed to create music directory", Toast.LENGTH_SHORT).show()
                     return
                 }
-                showToast("Created $APP_FOLDER_NAME folder")
+                Toast.makeText(this, "Created $APP_FOLDER_NAME folder", Toast.LENGTH_SHORT).show()
             }
 
             songs = musicDir.listFiles()?.filter { file ->
@@ -140,18 +126,14 @@ class Mp3PlayerActivity : AppCompatActivity() {
             }?.toMutableList() ?: mutableListOf()
 
             if (songs.isEmpty()) {
-                showToast("No MP3 files found in $APP_FOLDER_NAME")
+                Toast.makeText(this, "No MP3 files found in $APP_FOLDER_NAME", Toast.LENGTH_SHORT).show()
             } else {
                 playSong(0)
             }
         } catch (e: Exception) {
-            Log.e(TAG, "Failed to load songs", e)
-            showToast("Failed to load songs")
+            Toast.makeText(this, "Failed to load songs", Toast.LENGTH_SHORT).show()
         }
     }
-
-
-
 
     private fun playSong(index: Int) {
         if (index !in songs.indices) return
@@ -163,9 +145,8 @@ class Mp3PlayerActivity : AppCompatActivity() {
                 player.prepare()
                 player.start()
 
-
-                this@Mp3PlayerActivity.isPlaying = true
-                this@Mp3PlayerActivity.currentSongIndex = index
+                isPlaying = true
+                currentSongIndex = index
 
                 runOnUiThread {
                     buttonPause.text = "Pause"
@@ -175,17 +156,14 @@ class Mp3PlayerActivity : AppCompatActivity() {
                 }
             }
         } catch (e: IllegalStateException) {
-            Log.e(TAG, "MediaPlayer not initialized", e)
-            showToast("Player error")
+            Toast.makeText(this, "Player error", Toast.LENGTH_SHORT).show()
             initMediaPlayer()
             playSong(index)
         } catch (e: IOException) {
-            Log.e(TAG, "File error: ${songs[index].name}", e)
-            showToast("File error")
+            Toast.makeText(this, "File error", Toast.LENGTH_SHORT).show()
             playNextSong()
         } catch (e: Exception) {
-            Log.e(TAG, "Unexpected error", e)
-            showToast("Playback failed")
+            Toast.makeText(this, "Playback failed", Toast.LENGTH_SHORT).show()
         }
     }
 
@@ -222,12 +200,6 @@ class Mp3PlayerActivity : AppCompatActivity() {
     private fun playPreviousSong() {
         currentSongIndex = if (currentSongIndex - 1 < 0) songs.size - 1 else currentSongIndex - 1
         playSong(currentSongIndex)
-    }
-
-    private fun showToast(message: String) {
-        runOnUiThread {
-            Toast.makeText(this@Mp3PlayerActivity, message, Toast.LENGTH_SHORT).show()
-        }
     }
 
     override fun onPause() {

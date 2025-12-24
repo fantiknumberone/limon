@@ -45,6 +45,7 @@
     <string name="song_info_format">%1$s - %2$s</string>
 
 
+
     <string name="button_system_info">Локация</string>
     <string name="time_icon">Time icon</string>
     <string name="signal_icon">Signal icon</string>

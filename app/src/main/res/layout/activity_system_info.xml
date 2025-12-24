@@ -1,166 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
+    android:orientation="vertical"
+    android:padding="24dp"
     android:background="#FFFFFF">
 
-    <ImageView
-        android:id="@+id/logo"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="129dp"
-        android:contentDescription="@string/app_logo"
-        android:src="@drawable/app_logo" />
-
     <TextView
-        android:id="@+id/title"
-        android:layout_width="274dp"
-        android:layout_height="53dp"
-        android:layout_below="@id/logo"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="205dp"
-        android:layout_marginEnd="99dp"
-        android:text="@string/system_info_title"
-        android:textColor="#212121"
-        android:textSize="24sp"
-        android:textStyle="bold" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/title"
-        android:layout_marginTop="64dp"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:text="Онлайн режим"
-            android:textColor="#212121"
-            android:textSize="16sp" />
-
-        <Switch
-            android:id="@+id/switchOnlineMode"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/tvServerStatus"
+        android:id="@+id/tvTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/switchOnlineMode"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:text="Сервер: проверка..."
-        android:textSize="14sp"
-        android:textColor="#757575" />
-
+        android:text="Время: --:--:--"
+        android:textSize="20sp"
+        android:layout_marginBottom="16dp"/>
 
     <TextView
-        android:id="@+id/tvBufferCount"
+        android:id="@+id/tvSignal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tvServerStatus"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="5dp"
-        android:text="Буфер: 0"
-        android:textSize="14sp"
-        android:textColor="#2196F3" />
+        android:text="Сигнал: -- dBm"
+        android:textSize="20sp"
+        android:layout_marginBottom="16dp"/>
 
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/tvLocation"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tvBufferCount"
-        android:layout_marginTop="158dp"
-        android:background="#FAFAFA"
-        android:elevation="4dp"
-        android:orientation="vertical"
-        android:padding="16dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/time_label"
-                android:textColor="#212121"
-                android:textSize="18sp" />
-
-            <TextView
-                android:id="@+id/tvTime"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:textColor="#212121"
-                android:textSize="18sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/signal_label"
-                android:textColor="#212121"
-                android:textSize="18sp" />
-
-            <TextView
-                android:id="@+id/tvSignal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:textColor="#212121"
-                android:textSize="18sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/location_label"
-                android:textColor="#212121"
-                android:textSize="18sp" />
-
-            <TextView
-                android:id="@+id/tvLocation"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:textColor="#212121"
-                android:textSize="18sp" />
-        </LinearLayout>
-    </LinearLayout>
+        android:text="Локация: ожидание..."
+        android:textSize="20sp"
+        android:layout_marginBottom="32dp"/>
 
     <TextView
         android:id="@+id/tvStatus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="30dp"
-        android:text="Готово"
-        android:textColor="#757575"
-        android:textSize="14sp" />
+        android:text="Статус: готов"
+        android:textSize="16sp"
+        android:textColor="#666666"/>
 
-</RelativeLayout>
+</LinearLayout>
