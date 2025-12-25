@@ -570,11 +570,11 @@ class SystemInfoActivity : AppCompatActivity() {
                 if (zmqClient.isConnected()) {
                     val sent = zmqClient.send(json)
                     withContext(Dispatchers.Main) {
-                        tvStatus.text = if (sent) "✅ Данные отправлены" else "⚠️ Ошибка"
+                        tvStatus.text = if (sent) " Данные отправлены" else " Ошибка"
                     }
                 } else {
                     withContext(Dispatchers.Main) {
-                        tvStatus.text = "🔴 Сервер отключен"
+                        tvStatus.text = " Сервер отключен"
                     }
                 }
 
